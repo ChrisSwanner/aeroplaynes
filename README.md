@@ -50,7 +50,7 @@ _This is an Epicodus practice project for week 2 of the C# course. Its purpose i
 * _Clone this GitHub repository_
 
 ```
-git clone https://github.com/Sara-Hamilton/Template.git
+git clone https://github.com/Sara-Hamilton/Airplanes.git
 ```
 
 * _Install the .NET Framework_

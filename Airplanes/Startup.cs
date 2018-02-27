@@ -4,8 +4,12 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Template
+namespace Airplanes
 {
+  public static class DBConfiguration
+  {
+  public static string ConnectionString = "server=localhost;user id=root;password=root;port=8889;database=airplanes;";
+  }
   public class Startup
   {
     public Startup(IHostingEnvironment env)
@@ -16,6 +20,7 @@ namespace Template
       Configuration = builder.Build();
     }
 
+
     public IConfigurationRoot Configuration { get; }
 
     public void ConfigureServices(IServiceCollection services)
@@ -25,6 +30,7 @@ namespace Template
 
     public void Configure(IApplicationBuilder app)
     {
+      app.UseStaticFiles();
       app.UseDeveloperExceptionPage();
       app.UseMvc(routes =>
       {
@@ -34,7 +40,7 @@ namespace Template
       });
       app.Run(async (context) =>
       {
-        await context.Response.WriteAsync("Hello World!");
+        await context.Response.WriteAsync("Hello Mom!");
       });
     }
   }

@@ -1,0 +1,11 @@
+
+@{
+  Layout = "_Layout";
+}
+<h1>@Model["cities"].GetDepName() to @Model["cities"].GetArrName()</h1>
+@foreach (var flight in @Model["flight"])
+{
+  <p>Departure: @flight.GetDep() | Arrival: @flight.GetArr() | Status: @flight.GetStatus() | <a href="/flights/@flight.GetId()/update">Change Status</a></p>
+}
+<p><a href='/cities/@Model["cities"].GetId()/flights/new'>Add New Flight Path</a></p>
+<p><a href="/">Return Home</a></p>

@@ -1,0 +1,25 @@
+
+@{
+  Layout = "_Layout";
+}
+<h1>Flights</h1>
+<h3>Add A New Flight to @Model.GetDepName() to @Model.GetArrName()</h3>
+<form action="/cities/@Model.GetId()/flights" method="post">
+  <div class="form-group">
+    <label for="dep-date">Departure Date</label>
+    <input type="date" id="dep-date" name="dep-date" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="dep-time">Departure Time</label>
+    <input type="time" id="dep-time" name="dep-time" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="arr-date">Arrival Date</label>
+    <input type="date" id="arr-date" name="arr-date" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="arr-time">Arrival Time</label>
+    <input type="time" id="arr-time" name="arr-time" class="form-control">
+  </div>
+  <button type="submit" class="btn btn-warning" name="button">Add Flight Times</button>
+</form>

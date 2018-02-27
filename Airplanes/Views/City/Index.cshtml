@@ -1,0 +1,13 @@
+
+@{
+  Layout = "_Layout";
+}
+    <div class="jumbotron">
+      <h1>Do You A Fly</h1>
+    </div>
+      @foreach (var city in Model)
+      {
+        <h4>@city.GetDepName() to @city.GetArrName() | <a href="/cities/@city.GetId()">View Available Flight Paths</a></h4>
+        <hr>
+      }
+      <a href="/cities/new">Add Flight Path</a>
